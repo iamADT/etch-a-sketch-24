@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     initiateGrid(16);
 });
 
-function initiateGrid(cellSize) {
+function initiateGrid(cellsPerSide) {
     const gridSize = 400;
-    const cellsPerSide = gridSize/cellSize;
+    const cellSize = gridSize/cellsPerSide;
     gridArea = cellsPerSide * cellsPerSide;
 
     while (grid.firstChild) {
