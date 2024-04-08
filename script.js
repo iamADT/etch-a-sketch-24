@@ -1,6 +1,6 @@
-const button10 = document.querySelector('button[name="10"]')
 const grid = document.querySelector('.grid');
 const gridButtons = document.querySelectorAll('.gridButtons button');
+const buttonReset = document.querySelector('button[name="reset"]');
 let cellSize;
 
 // Grid Styles
@@ -59,9 +59,9 @@ function createCell(gridCell, cellSize){
     gridCell.style.borderBottom = '1px solid #909090';
 }
 
-// Mouse over grid cells
+// Mouseover grid cells
 function mouseOverEvent () {
-    const allGridCells = document.querySelectorAll('.grid > div');;
+    const allGridCells = document.querySelectorAll('.grid > div');
     for (const gridCell of allGridCells) {
         gridCell.addEventListener("mouseover", ()=>{
             gridCell.style.backgroundColor = '#000000'
@@ -69,7 +69,12 @@ function mouseOverEvent () {
     }
 }
 
-button10.addEventListener("click", ()=>{
-    initiateGrid(10);
-})
+//ClearGrid
+buttonReset.addEventListener("click", clearGrid)
+function clearGrid() {
+    const allGridCells = document.querySelectorAll('.grid > div');
+    for (const gridCell of allGridCells){
+            gridCell.style.backgroundColor = ''
+        }
+    }
 
