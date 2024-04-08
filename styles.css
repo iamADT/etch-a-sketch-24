@@ -79,3 +79,9 @@ button:hover{
     margin: 0 auto;
     padding: 32px 0px;
 }
+
+.mouseOverColour{
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
